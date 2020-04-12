@@ -1,2 +1,3 @@
-import helpful from './helpers'
-helpful()
+import helpful,{sort} from './helpers';
+helpful();
+sort();
