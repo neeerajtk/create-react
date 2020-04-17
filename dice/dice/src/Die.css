@@ -6,7 +6,7 @@
 
 .shaking{
     animation-name: jiggle;
-    animation-duration: 4s;
+    animation-duration: 3s;
     /* use wobble animation from codepen to get 1s .. 4s given to maximise effect */
 }
 
