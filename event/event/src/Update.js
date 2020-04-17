@@ -15,11 +15,14 @@ class Update extends Component{
  
     render(){
         return(
-            <div>
+            <div className="wrapper">
                 <h1>
                     {this.state.clicked ? 'Number is '+this.rand : 'Not Clicked'}
                 </h1>
-                <button onClick={this.handleClick}>Random Number</button>
+                <h2>
+                    {this.rand===7?'Winner':'-'}
+                </h2>
+                <button className="button" onClick={this.handleClick}>Random Number</button>
 
             </div>
         )
