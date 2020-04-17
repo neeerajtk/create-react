@@ -26,8 +26,8 @@ class RollDice extends Component{
         return( 
         <div className="RollDice">
             <div className="container">
-            <Die face={this.state.die1} />
-            <Die face={this.state.die2} />
+            <Die face={this.state.die1} rolling={this.state.rolling} />
+            <Die face={this.state.die2} rolling={this.state.rolling} />
             </div>
             <br/>
             <button onClick={this.roll} disabled={this.state.rolling}>

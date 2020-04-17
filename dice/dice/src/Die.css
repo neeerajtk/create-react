@@ -1,5 +1,22 @@
 .Die{
     font-size: 10em;
     padding: 0.25em;
-    color: black;
+    color: black;   
 }
+
+.shaking{
+    animation-name: jiggle;
+    animation-duration: 4s;
+    /* use wobble animation from codepen to get 1s .. 4s given to maximise effect */
+}
+
+@keyframes jiggle {
+    0%, 5.2%, 100% { margin-left: 0px;}
+    0.4%  {margin-left: -3px;}
+    1.2%  {margin-left: 3px;}
+    2%  {margin-left: -3px;}
+    2.8%  {margin-left: 3px;}
+    3.6%  {margin-left: -3px;}
+    4.4%  {margin-left: 3px;}
+  }
+  
