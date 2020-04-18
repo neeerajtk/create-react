@@ -13,8 +13,8 @@
 @keyframes jiggle {
     0%, 5.2%, 100% { margin-left: 0px;}
     0.4%  {margin-left: -3px;}
-    1.2%  {margin-left: 3px;}
-    2%  {margin-left: -3px;}
+    2%  {margin-left: 3px;}
+    2.3%  {margin-left: -3px;}
     2.8%  {margin-left: 3px;}
     3.6%  {margin-left: -3px;}
     4.4%  {margin-left: 3px;}
