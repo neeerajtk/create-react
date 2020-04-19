@@ -15,14 +15,21 @@ class CoinContainer extends Component{
             nHeads: 0,
             nTails: 0
         };
+this.handleClick = this.handleClick.bind(this);
         
+    }
+    flipCoin(){
         
+    }
+    handleClick(e){
+
     }
     render(){
         return(
         <div className="CoinContainer">
             <h2>Lets flip a coin</h2>
-        <p>Out of {this.state.nFlips} flips, there have been {this.state.nHeads} heads and {this.state.nTails} tails.</p> 
+            <button onClick={this.handleClick}>Toss Coin</button>
+            <p>Out of {this.state.nFlips} flips, there have been {this.state.nHeads} heads and {this.state.nTails} tails.</p> 
 
         </div>
             )
