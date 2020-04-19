@@ -7,13 +7,13 @@ class Box extends Component{
     };
     constructor(props){
         super(props);
-        this.state = {color: choice(this.props.allColors)};
+        this.state = {color: choice(this.props.colors)};
         this.handleClick = this.handleClick.bind(this);
     }
     pickcolor(){
         let newColor;
         do {
-            newColor = choice(this.props.allColors);
+            newColor = choice(this.props.colors);
         } while(newColor === this.state.color);
         this.setState({color:newColor});
     }
