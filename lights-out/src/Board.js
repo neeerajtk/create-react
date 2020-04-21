@@ -66,7 +66,7 @@ class Board extends Component {
     // win when every cell is turned off
     // TODO: determine is the game has been won
 
-    this.setState({board, hasWon});
+    // this.setState({board, hasWon});
   }
 
 
@@ -81,6 +81,17 @@ class Board extends Component {
     // make table board
 
     // TODO
+    return (
+      <table className="Board">
+        <tbody>
+          <tr>
+            <Cell isLit={true} />
+            <Cell isLit={false} />
+            <Cell isLit={true} />
+          </tr>
+        </tbody>
+      </table>
+    )
   }
 }
 
