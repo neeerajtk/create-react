@@ -14,10 +14,19 @@ class NewBoxForm extends Component{
         return(
 
                 <form>
-                    <label>Height</label>
-                        <input type="text"/>
-                    <label>Width</label>
-                        <input type="text"/>
+                    <label htmlFor="width">Height</label>
+                        <input 
+                        type="text" 
+                        name="height" 
+                        value={this.state.height}
+                        id="height"/>
+                    <label htmlFor="width">Width</label>
+                        <input 
+                        type="text"
+                        name="width"
+                        value={this.state.width}
+                        id="width"
+                        />
                 </form>
          
         )
