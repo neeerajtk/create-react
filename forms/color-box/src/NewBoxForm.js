@@ -9,24 +9,29 @@ class NewBoxForm extends Component{
             color:""
         };
         this.handleChange=this.handleChange.bind(this);
+        this.handleChange=this.handleSubmit.bind(this);
     }
     handleChange(evt){
-        // 227
         this.setState({[evt.target.name]: evt.target.value});
     }
-   
+    handleSubmit(evt){
+
+    }
     render(){
         return(
 
-                <form>
-                    <label htmlFor="width">Height</label>
+                <form onSubmit={this.handleSubmit}>
+                    <div>
+                        <label htmlFor="width">Height</label>
                         <input 
                         type="text" 
                         name="height" 
                         value={this.state.height}
                         onChange={this.handleChange}
                         id="height"/>
-                    <label htmlFor="width">Width</label>
+                    </div>
+                    <div>
+                        <label htmlFor="width">Width</label>
                         <input 
                         type="text"
                         name="width"
@@ -34,6 +39,8 @@ class NewBoxForm extends Component{
                         onChange={this.handleChange}
                         id="width"
                         />
+                    </div>
+                    <div>
                         <label htmlFor="color">Color</label>
                         <input 
                         type="text"
@@ -42,6 +49,10 @@ class NewBoxForm extends Component{
                         onChange={this.handleChange}
                         id="color"
                         />
+                    </div>
+                    <button>
+                        Add New Box
+                    </button>
                 </form>
          
         )
