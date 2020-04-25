@@ -14,8 +14,11 @@ class Deck extends Component {
     }
     async getCard(){
         let id= this.state.deck.deck_id;
-        let cardUrl=`${API_BASE_URL}/${id}/draw`;
+        let cardUrl=`${API_BASE_URL}/${id}/draw/`;
         let cardRes = await axios.get(cardUrl);
+        console.log(cardRes.data);
+        
+        
     }
 
     render(){
