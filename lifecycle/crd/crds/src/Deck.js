@@ -4,7 +4,7 @@ const API_BASE_URL = "https://deckofcardsapi.com/api/deck";
 class Deck extends Component {
     constructor(props){
         super(props);
-        this.state={deck: null}
+        this.state={deck: null, drawn: []}
         this.getCard=this.getCard.bind(this);
     }
     async componentDidMount(){
@@ -17,7 +17,17 @@ class Deck extends Component {
         let cardUrl=`${API_BASE_URL}/${id}/draw/`;
         let cardRes = await axios.get(cardUrl);
         console.log(cardRes.data);
-        
+        let card = cardRes.data.cards[0];
+        this.setState(st=>({
+            drawn: [
+                ...st.drawn,
+                {
+                    id:card.code,
+                    image: card.image,
+                    name: `${card.suit} ${card.value}`
+                }
+            ]
+        }))
         
     }
 
