@@ -13,10 +13,14 @@ class Deck extends Component {
         );
     }
     async getCard(){
-        let id= this.state.deck.deck_id;
-        let cardUrl=`${API_BASE_URL}/${id}/draw/`;
-        let cardRes = await axios.get(cardUrl);
-        console.log(cardRes.data);
+        let deck_id= this.state.deck.deck_id;
+        try{
+            let cardUrl=`${API_BASE_URL}/${deck_id}/draw/`;
+            let cardRes = await axios.get(cardUrl);
+            if(!cardRes.data.success){
+                throw new Error("No card remaining");
+        }
+        
         let card = cardRes.data.cards[0];
         this.setState(st=>({
             drawn: [
@@ -27,8 +31,10 @@ class Deck extends Component {
                     name: `${card.value} of ${card.suit} `
                 }
             ]
-        }))
-        
+        }));
+    }catch(err){
+        alert(err);
+    }
     }
 
     render(){
@@ -39,6 +45,6 @@ class Deck extends Component {
             </div>
         );
     }
-}
 
+}
 export default Deck;
