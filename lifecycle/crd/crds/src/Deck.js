@@ -24,7 +24,7 @@ class Deck extends Component {
                 {
                     id:card.code,
                     image: card.image,
-                    name: `${card.suit} ${card.value}`
+                    name: `${card.value} of ${card.suit} `
                 }
             ]
         }))
