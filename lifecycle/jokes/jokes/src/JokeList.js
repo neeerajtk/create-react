@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './JokeList.css';
+import Joke from './Joke.js';
 
 class JokeList extends Component{
     static defaultProps = {
@@ -14,7 +15,7 @@ class JokeList extends Component{
         let jokes=[];
         while(jokes.length<this.props.numJokesToGet){       
             let res = await axios.get("https://icanhazdadjoke.com/",{headers:{Accept:"application/json"}});
-            jokes.push(res.data.joke);
+            jokes.push({text: res.data.joke, votes: 0});
     }
     this.setState({jokes: jokes})
 }
@@ -30,9 +31,7 @@ class JokeList extends Component{
                 </div>
                 <div className="JokeList-jokes">
                     {this.state.jokes.map(j=>(
-                            <div>
-                                {j}
-                            </div>
+                           <Joke votes={j.votes} text={j.text} />
                         ))}
                 </div>
                 
