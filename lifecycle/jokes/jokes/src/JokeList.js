@@ -1,6 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import axios from 'axios';
 
 class JokeList extends Component{
+    async componentDidMount(){
+        let joke = await axios.get("https://icanhazdadjokes.com/");
+    }
     render(){
         return(
             <div>
