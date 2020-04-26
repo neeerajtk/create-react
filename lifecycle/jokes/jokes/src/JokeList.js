@@ -26,6 +26,7 @@ class JokeList extends Component{
        
     }
     async getJokes(){
+        try{
         let jokes=[];
         while(jokes.length<this.props.numJokesToGet){       
             let res = await axios.get("https://icanhazdadjoke.com/",{headers:{Accept:"application/json"}});
@@ -41,8 +42,13 @@ class JokeList extends Component{
         loading: false,
         jokes: [...st.jokes, ...jokes]
     }),
-    ()=>window.localStorage.setItem("jokes",JSON.stringify(this.state.jokes))); 
+    ()=>window.localStorage.setItem("jokes",JSON.stringify(this.state.jokes))
+    ); 
+    }catch(e) {
+        alert(e);
+    }   
     }
+    
     handleVote(id, delta){
         this.setState(st=>({
             jokes: st.jokes.map(j=>
