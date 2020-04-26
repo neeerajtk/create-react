@@ -27,8 +27,10 @@ class JokeList extends Component{
             let res = await axios.get("https://icanhazdadjoke.com/",{headers:{Accept:"application/json"}});
             jokes.push({id: uuid(),text: res.data.joke, votes: 0});
     };
-    this.setState({jokes: jokes});
-    window.localStorage.setItem("jokes", JSON.stringify(jokes));
+    this.setState(st =>({
+        jokes: [...st.jokes, ...jokes]
+    }),
+    ()=>window.localStorage.setItem("jokes",JSON.stringify(this.state.jokes))); 
     }
     handleVote(id, delta){
         this.setState(st=>({
