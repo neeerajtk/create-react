@@ -47,3 +47,27 @@
     overflow: scroll;
     box-shadow: 0 19px 38px rgba(29, 26, 26), 0 15px 12px rgba(29, 26, 26);
 }
+
+.JokeList-getmore{
+    font-size: 1.5rem;
+    width: 50%;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    color: white;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    margin:2rem;
+    box-shadow: 0 19px 38px rgba(29, 26, 26), 0 15px 12px rgba(29, 26, 26);
+    word-spacing: 1.5rem;
+    cursor: pointer;
+    transition: 0.4s ease;
+    background: linear-gradient(
+        135deg,
+        rgba(221, 197, 197) 0%,
+        rgba(221, 197, 197) 50%,
+        rgb(179, 19, 19) 50%,
+        rgb(179, 19, 19) 100%
+      );
+
+}
