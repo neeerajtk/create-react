@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import {Switch, Route} from "react-router-dom";
+import whiskey from './images/whiskey.jpg';
+import tubby from './images/tubby.jpg';
+import hazel from './images/hazel.jpg';
 
 class App extends Component{
   static defaultProps = {
@@ -36,6 +40,9 @@ class App extends Component{
       }
     ]
   };
+  render(){
+    return <Route path="/dogs" render={()=><h1>Dog List! </h1>}/>;
+  }
 }
 
 export default App;
