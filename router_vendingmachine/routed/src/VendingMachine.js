@@ -10,7 +10,7 @@ class VendingMachine extends Component{
                   <h1>hello home</h1>
                 </Message>
                 <Message>
-                    <Link exact to="/soda">Soda</Link>
+                    <Link exact to="/soda">Soda</Link><br></br>
                     <Link exact to="/chips">Chips</Link>
                     <Link exact to="/sardines">Sardines</Link>
                 </Message>
