@@ -4,7 +4,7 @@ class Chips extends Component{
     render(){
         return(
             <div>
-
+                          <h1>hello c</h1>
             </div>
         );
             
