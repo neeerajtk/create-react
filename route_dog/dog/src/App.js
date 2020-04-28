@@ -6,6 +6,7 @@ import {Switch, Route} from "react-router-dom";
 import whiskey from './images/whiskey.jpg';
 import tubby from './images/tubby.jpg';
 import hazel from './images/hazel.jpg';
+import Navbar from './Navbar';
 
 class App extends Component{
   static defaultProps = {
@@ -51,6 +52,8 @@ class App extends Component{
       return <DogDetails {...props} dog={currentDog} />
     };
     return (
+      <div>
+      <Navbar/>
       <Switch>
         <Route 
         exact 
@@ -58,6 +61,7 @@ class App extends Component{
         render={()=><DogList dogs={this.props.dogs} />}/>;
         <Route exact path="/dogs/:name" render={getDog}/>
       </Switch>
+      </div>
     );
     }
 }
