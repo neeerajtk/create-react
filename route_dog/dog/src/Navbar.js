@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom'
 class Navbar extends Component{
     render(){
         const dogLinks = this.props.dogs.map(dog=>(
-        <li> 
-            <NavLink to={`/dogs/${dog.name}`} className="nav-link" key={dog.name}>
+        <li className="nav-item" key={dog.name}> 
+            <NavLink exact to={`/dogs/${dog.name}`} className="nav-link" key={dog.name}>
             {dog.name}
             </NavLink>
         </li>
@@ -29,7 +29,7 @@ class Navbar extends Component{
                <div className="collapse navbar-collapse" id="navbarNav">
                    <ul className="navbar-nav">
                         <li className="nav-item">
-                            <NavLink to="/dogs" className="nav-link">
+                            <NavLink exact to="/dogs" className="nav-link">
                                 Home
                             </NavLink>
                         </li>
