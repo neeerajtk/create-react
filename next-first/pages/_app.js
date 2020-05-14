@@ -7,7 +7,11 @@ function MyApp({ Component, pageProps }) {
     // calls page's `getInitialProps` and fills `appProps.pageProps`
     const appProps = await App.getInitialProps(appContext);
   
-    return { ...appProps }
-  }
+    return (
+        <Container>
+            <p>Allooo</p>
+            <Component { ...appProps } />
+        </Container>
+  )}
   
   export default MyApp
