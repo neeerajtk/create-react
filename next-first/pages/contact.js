@@ -1,4 +1,10 @@
+import Navbar from "../components/Navbar"; 
+
 const ContactPage = ()=> {
-    return <h1>Dont contact me !!!</h1>;
-}
+    return( 
+    <>
+    <Navbar/>
+    <h1>Dont contact me !!!</h1>;
+    </>
+)}
 export default ContactPage;
