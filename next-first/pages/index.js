@@ -1,9 +1,9 @@
+import Navbar from "../components/Navbar"; 
 const Hello = ()=> (
     <div>
+        <Navbar/>
         <h1>Index  Page</h1>
-        <Link href="/about">
-            <a>About</a>
-        </Link>
+        
     </div>
 );
 
