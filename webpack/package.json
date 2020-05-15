@@ -4,7 +4,9 @@
   "private": true,
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "webpack"
+  },
   "author": "neeerajtk",
   "license": "ISC",
   "devDependencies": {
