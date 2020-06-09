@@ -22,8 +22,9 @@ myPromise
         // fetch is like a promise
 
 
-        fetch('https://jsonplaceholder.typicode.com/todos/1')
+        fetch('https://jsonplacehlder.typicode.com/todos/1')
             .then(response => response.json())
             .then(json=>console.log(json))
-            .catch('wrong api')
+            .catch(error=>console.log('error !!!')
+            )
         
