@@ -10,7 +10,20 @@ const myPromise = new Promise((resolve, reject)=>{
 
 myPromise
         .then(value => value + '!!!')
-        // value in promise accessed using then 
+        // wrap it in a reserve promise 
          .then(newValue => console.log(newValue))
+        // value in promise accessed using then 
         .catch(rejectValue => console.log(rejectValue));
         // using catch we get the reject value 
+
+        // SUCCESS IS IN then , FAILURE IN catch 
+
+
+        // fetch is like a promise
+
+
+        fetch('https://jsonplaceholder.typicode.com/todos/1')
+            .then(response => response.json())
+            .then(json=>console.log(json))
+            .catch('wrong api')
+        
