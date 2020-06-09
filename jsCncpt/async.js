@@ -8,5 +8,9 @@ const myPromise = new Promise((resolve, reject)=>{
     }
 });
 
-myPromise.then(value => console.log(value))
+myPromise
+        .then(value => value + '!!!')
+        // value in promise accessed using then 
+         .then(newValue => console.log(newValue))
         .catch(rejectValue => console.log(rejectValue));
+        // using catch we get the reject value 
