@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import './card-list-styles.css';
+
 
 const Cardlist = (props) => {
     console.log(props.name)
@@ -7,8 +9,7 @@ const Cardlist = (props) => {
 
     return (
         
-        <div>
-                Hello
+        <div className="card-list">
                 {props.children}
         </div>
     )
