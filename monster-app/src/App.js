@@ -22,7 +22,7 @@ class App extends Component{
   render() {
     return (
     <div className="App">
-      <CardList/>
+      <CardList name={'neeraj'}><h1>Test 1</h1></CardList>
     {
       
      this.state.monsters.map(monster=>
