@@ -2,17 +2,12 @@ import React from 'react';
 import './card-list-styles.css';
 
 
-const Cardlist = (props) => {
-    console.log(props.name)
-    console.log(props.children);
-    
-
-    return (
-        
+const Cardlist = props => (
         <div className="card-list">
-                {props.children}
+            {props.monsters.map(monster=>(
+                <h1 key={monster.id}>{monster.name}</h1>
+            ))}
         </div>
-    )
 
-}
+);
 export default Cardlist;
