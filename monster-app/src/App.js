@@ -14,7 +14,8 @@ class App extends Component{
   componentDidMount(){
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
-      .then(users => this.setState({monsters: users}));      
+      .then(users => this.setState({monsters: users}));
+      // .then returns the received json  object      
   };
 
 
@@ -22,11 +23,7 @@ class App extends Component{
   render() {
     return (
     <div className="App">
-      <CardList monsters={this.state.monsters}>
-      
-
-      </CardList>
-    
+      <CardList monsters={this.state.monsters}/>
     </div>
     )}
 }
