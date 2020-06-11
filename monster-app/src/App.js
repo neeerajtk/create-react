@@ -24,7 +24,11 @@ class App extends Component{
   render() {
     return (
     <div className="App">
-      <input type="search" placeholder="Search Monster " onChange={e=>console.log(e.target.value)
+      <input type="search" placeholder="Search Monster " onChange={ e =>
+       this.setState({searchField: e.target.value}, ()=>
+              console.log(this.state)
+              // callback func added to avoid async from not missing out first character 
+      )
       }/>
       <CardList monsters={this.state.monsters}/>
     </div>
