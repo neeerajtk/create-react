@@ -24,7 +24,7 @@ class App extends Component{
   render() {
     return (
     <div className="App">
-      <input type="search" placeholder="Search Monster " onChange={e=>console.log(e.target)
+      <input type="search" placeholder="Search Monster " onChange={e=>console.log(e.target.value)
       }/>
       <CardList monsters={this.state.monsters}/>
     </div>
