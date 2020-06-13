@@ -32,8 +32,14 @@
 
 const myArray = [1,2,3,4,5];
 
-console.log(myArray.includes(2));
+// console.log(myArray.includes(2));
 
+console.log(myArray.includes(2, 3));
+// checks whether contains 2 from 3rd indexedDB, returns false 
+
+
+const newArray = [{id: 1},{id: 2},{id: 3}];
+console.log(newArray[1]);
 
 
 // reduce();
