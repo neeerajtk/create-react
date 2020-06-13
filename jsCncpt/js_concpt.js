@@ -53,6 +53,12 @@ const obj3 = obj2;
 console.log(obj3===obj2);
 // returns true, due to assignment change 
 
+obj2.id = 18;
+console.log(obj2);
+console.log(obj3);
+// both 18 , changing one of value gets affected in both 
+
+
 // reduce();
 
 // find();
