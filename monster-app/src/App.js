@@ -37,7 +37,7 @@ class App extends Component{
               // callback func added to avoid async from not missing out first character 
       )
       }/>
-      <CardList monsters={this.state.monsters}/>
+      <CardList monsters={filteredMonsters}/>
     </div>
     )}
 }
