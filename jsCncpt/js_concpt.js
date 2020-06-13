@@ -49,7 +49,9 @@ console.log(obj1 === obj2);
 console.log(obj1 == obj2);
 // returns false as they point to diffrnt locations, everything except primitive point to diff locations , evrything excpt are objects 
 
-
+const obj3 = obj2;
+console.log(obj3===obj2);
+// returns true, due to assignment change 
 
 // reduce();
 
