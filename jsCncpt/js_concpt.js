@@ -40,6 +40,17 @@ console.log(myArray.includes(2, 3));
 
 const newArray = [{id: 1},{id: 2},{id: 3}];
 console.log(newArray[1]);
+console.log(newArray.includes({id: 1}));
+// returns false :( 
+const o1 = {id: 1};
+const o2 = {id: 2};
+const o3 = {id: 3};
+const newArray2 = [o1, o2, o3];
+console.log(newArray2);
+console.log(newArray2.includes(o1));
+ 
+console.log("***");
+
 
 const obj1 = {id: 1};
 
@@ -57,6 +68,8 @@ obj2.id = 18;
 console.log(obj2);
 console.log(obj3);
 // both 18 , changing one of value gets affected in both 
+
+
 
 
 // reduce();
