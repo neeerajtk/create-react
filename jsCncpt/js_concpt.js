@@ -41,6 +41,15 @@ console.log(myArray.includes(2, 3));
 const newArray = [{id: 1},{id: 2},{id: 3}];
 console.log(newArray[1]);
 
+const obj1 = {id: 1};
+
+const obj2 = {id: 1};
+
+console.log(obj1 === obj2);
+console.log(obj1 == obj2);
+// returns false as they point to diffrnt locations, everything except primitive point to diff locations , evrything excpt are objects 
+
+
 
 // reduce();
 
