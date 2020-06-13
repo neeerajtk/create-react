@@ -21,7 +21,12 @@
 const myArray = [1,3,5,7,9];
 
 myArray2 = myArray.filter(el=>el > 4 );
+// filter returns value based on condition 
 console.log(myArray2);
+
+myArray2 = myArray.filter(el=>true);
+console.log(myArray2);
+
 
 
 
